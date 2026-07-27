@@ -97,8 +97,11 @@
 .h-selo-video { background: rgba(255,255,255,.16); color: #DCE8DF; }
 
 .hero-rodape-vitrine {
-  font-size: 11.5px; color: #8FA997; text-align: right; margin-top: 2px;
+  font-size: 13px; font-weight: 600; color: var(--verde);
+  text-align: right; margin-top: 6px;
 }
+.hero-rodape-vitrine:hover { color: #8FD070; text-decoration: underline; }
+.hero-nota { margin-top: 14px; font-size: 13px; color: #8FA997; }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-mini { transition: none; }

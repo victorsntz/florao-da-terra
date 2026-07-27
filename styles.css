@@ -126,6 +126,21 @@ p { margin: 0; }
 .marca img { display: block; height: 38px; width: auto; }
 
 .nav { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap; }
+.topo-acoes { display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
+.btn-mural { font-weight: 700; padding-left: 20px; padding-right: 20px; }
+/* pontinho pulsando: o mural está vivo, tem coisa nova lá dentro */
+.btn-mural::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--verde-esc); opacity: .55;
+  animation: pisca-mural 2.4s ease-in-out infinite;
+}
+@keyframes pisca-mural {
+  0%, 100% { opacity: .25; transform: scale(.85); }
+  50%      { opacity: .9;  transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-mural::before { animation: none; opacity: .55; }
+}
 .nav a {
   padding: 7px 13px;
   border-radius: 99px;
@@ -163,6 +178,13 @@ p { margin: 0; }
 .btn-linha:hover { background: var(--surface-2); }
 .btn-fantasma { background: transparent; color: var(--ink-2); }
 .btn-fantasma:hover { background: var(--surface-2); }
+/* contorno claro — para viver sobre o verde-escuro do cabeçalho */
+.btn-linha-clara {
+  background: transparent; color: #DCE8DF;
+  border-color: rgba(255,255,255,.28);
+}
+.btn-linha-clara:hover { background: rgba(255,255,255,.10); color: #fff; }
+.btn-grande  { padding: 15px 30px; font-size: 16px; font-weight: 700; }
 .btn-bloco   { width: 100%; }
 .btn-sm      { padding: 7px 13px; font-size: 13px; }
 
@@ -689,6 +711,17 @@ input[type=range] { width: 100%; accent-color: var(--verde-txt); }
 /* Rodapé escuro: fecha a página com a cor da marca e, de quebra, resolve o
    contraste do logo — o arquivo tem a tipografia em areia, feita para fundo escuro. */
 .rodape { background: var(--verde-esc); color: #B0C6B8; margin-top: 40px; }
+
+/* Última chance de mandar a pessoa pro mural. Vai em toda página do site. */
+.rodape-chamada {
+  max-width: 1180px; margin: 0 auto; padding: 26px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+.rodape-chamada strong { display: block; color: #fff; font-size: 18px; letter-spacing: -.02em; }
+.rodape-chamada span { font-size: 13.5px; color: #A9C2B1; }
+.rodape-chamada .btn { flex-shrink: 0; }
 .rodape-inner {
   max-width: 1180px; margin: 0 auto; padding: 46px 20px 34px;
   display: grid; gap: 30px;

@@ -22,8 +22,8 @@
   <link rel="icon" href="/florao-da-terra/marca/favicon-512.png" sizes="512x512">
   <link rel="apple-touch-icon" href="/florao-da-terra/marca/favicon-180.png">
 
-  <link rel="stylesheet" href="/florao-da-terra/styles.css?v=13">
-  <link rel="stylesheet" href="/florao-da-terra/site.css?v=13">
+  <link rel="stylesheet" href="/florao-da-terra/styles.css?v=14">
+  <link rel="stylesheet" href="/florao-da-terra/site.css?v=14">
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Gado à venda", "numberOfItems": 4, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://floraodaterra.com.br/mural/#/anuncio/FT-1043", "name": "100 bezerras nelore desmamadas"}, {"@type": "ListItem", "position": 2, "url": "https://floraodaterra.com.br/mural/#/anuncio/FT-1048", "name": "45 vacas girolando em lactação"}, {"@type": "ListItem", "position": 3, "url": "https://floraodaterra.com.br/mural/#/anuncio/FT-1053", "name": "12 matrizes nelore PO com registro"}, {"@type": "ListItem", "position": 4, "url": "https://floraodaterra.com.br/mural/#/anuncio/FT-1068", "name": "30 touros nelore prontos para monta"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://floraodaterra.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Gado e animais", "item": "https://floraodaterra.com.br/gado/"}]}</script>
@@ -38,12 +38,15 @@
         <img src="/florao-da-terra/marca/logo.png" alt="Florão da Terra" width="900" height="223">
       </a>
       <nav class="nav">
-        <a href="/florao-da-terra/mural/">Mural</a>
         <a href="/florao-da-terra/mural/#/planos">Planos</a>
         <a href="/florao-da-terra/sobre/">Sobre</a>
         <a href="/florao-da-terra/contato/">Contato</a>
       </nav>
-      <a class="btn btn-ambar btn-anunciar" href="/florao-da-terra/mural/#/anunciar">Anunciar</a>
+
+      <div class="topo-acoes">
+        <a class="btn btn-verde btn-mural" href="/florao-da-terra/mural/">Ver o mural</a>
+        <a class="btn btn-linha-clara btn-anunciar" href="/florao-da-terra/mural/#/anunciar">Anunciar</a>
+      </div>
     </div>
   </header>
 
@@ -137,6 +140,14 @@
   </main>
 
   <footer class="rodape">
+    <div class="rodape-chamada">
+      <div>
+        <strong>O mural está aberto.</strong>
+        <span>Fazenda, gado, máquina e caminhonete à venda agora. Não precisa se cadastrar para olhar.</span>
+      </div>
+      <a class="btn btn-verde" href="/florao-da-terra/mural/">Ver o mural</a>
+    </div>
+
     <div class="rodape-inner">
       <div class="rodape-marca">
         <img src="/florao-da-terra/marca/logo.png" alt="Florão da Terra" width="900" height="223">
@@ -179,13 +190,13 @@
     </div>
   </footer>
 
-  <script src="/florao-da-terra/art.js?v=13"></script>
+  <script src="/florao-da-terra/art.js?v=14"></script>
   <script>
     // O texto já veio pronto do servidor; aqui só entram as ilustrações.
     document.querySelectorAll('[data-arte]').forEach(el => {
       if (!el.querySelector('img')) el.insertAdjacentHTML('afterbegin', arte(el.dataset.arte, variacaoDe(el.dataset.id)));
     });
   </script>
-  <script src="/florao-da-terra/site.js?v=13"></script>
+  <script src="/florao-da-terra/site.js?v=14"></script>
 </body>
 </html>
